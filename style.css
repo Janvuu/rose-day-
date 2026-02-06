@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* PAGE 1 */
+.page1 {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-text {
+  font-weight: bold;
+  font-size: 26px;
+  color: black;
+  cursor: pointer;
+}
+
+/* PAGE 2 */
+.page2 {
+  background: #f6b1b1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* message */
+.message {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 38px;
+  font-weight: bold;
+  color: maroon;
+  z-index: 2;
+}
+
+/* rose petals animation */
+.petals::before {
+  content: "🌹 🌹 🌹 🌹 🌹 🌹 🌹 🌹 🌹";
+  position: absolute;
+  top: -10%;
+  width: 100%;
+  font-size: 30px;
+  animation: fall 8s linear infinite;
+}
+
+@keyframes fall {
+  0% { top: -10%; }
+  100% { top: 110%; }
+}
